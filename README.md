@@ -26,3 +26,6 @@ to synchronize after cloning and before starting each assignment, as discussed i
 As a part of the assignment instructions, you will setup your assignment repo to perform automated testing using github actions.  See [this page](https://github.com/cu-ecen-aeld/aesd-assignments/wiki/Setting-up-Github-Actions) for details.
 
 Note that the unit tests will fail on this repository, since assignments are not yet implemented.  That's your job :) 
+
+Here are the results of my test:
+[![assignment-test](https://github.com/cu-ecen-aeld/assignment-1-albertklee/actions/workflows/github-actions.yml/badge.svg)](https://github.com/cu-ecen-aeld/assignment-1-albertklee/actions/workflows/github-actions.yml)
