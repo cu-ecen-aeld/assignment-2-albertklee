@@ -35,7 +35,6 @@
  *     LOG_ERR level.
  */
 
-#include <sys/resource.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <errno.h>
@@ -70,8 +69,7 @@ int main (int argc, char *argv[], char *envp[])
   const char *writestr  = argv[2];
 
   /* Compute size of writestr, and also limit to avoid problems */
-  const size_t maxlen = RLIMIT_FSIZE > SSIZE_MAX ? SSIZE_MAX : RLIMIT_FSIZE;
-  const size_t length = strnlen(writestr, maxlen);
+  const size_t length = strnlen(writestr, SSIZE_MAX);
 
   /* Output debugging information */
   syslog(LOG_DEBUG, "Writing %s to %s", writestr, writefile);
